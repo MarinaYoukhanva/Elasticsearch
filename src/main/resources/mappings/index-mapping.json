@@ -1,0 +1,93 @@
+{
+  "dynamic_templates": [
+    {
+      "body_persian": {
+        "path_match": "body.fa",
+        "match_mapping_type": "string",
+        "mapping": {
+          "type": "text",
+          "analyzer": "persian"
+        }
+      }
+    },
+    {
+      "body_english": {
+        "path_match": "body.en",
+        "match_mapping_type": "string",
+        "mapping": {
+          "type": "text",
+          "analyzer": "english"
+        }
+      }
+    },
+    {
+      "body_arabic": {
+        "path_match": "body.ar",
+        "match_mapping_type": "string",
+        "mapping": {
+          "type": "text",
+          "analyzer": "arabic"
+        }
+      }
+    },
+    {
+      "body_french": {
+        "path_match": "body.fr",
+        "match_mapping_type": "string",
+        "mapping": {
+          "type": "text",
+          "analyzer": "french"
+        }
+      }
+    },
+    {
+      "body_german": {
+        "path_match": "body.de",
+        "match_mapping_type": "string",
+        "mapping": {
+          "type": "text",
+          "analyzer": "german"
+        }
+      }
+    },
+    {
+      "body_russian": {
+        "path_match": "body.ru",
+        "match_mapping_type": "string",
+        "mapping": {
+          "type": "text",
+          "analyzer": "russian"
+        }
+      }
+    },
+    {
+      "body_chinese": {
+        "path_match": "body.zh",
+        "match_mapping_type": "string",
+        "mapping": {
+          "type": "text",
+          "analyzer": "smartcn"
+        }
+      }
+    },
+    {
+      "body_default": {
+        "path_match": "body.*",
+        "match_mapping_type": "string",
+        "mapping": {
+          "type": "text",
+          "analyzer": "standard"
+        }
+      }
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "keyword"
+    },
+    "body": {
+      "type": "object",
+      "dynamic": true
+    }
+  }
+}
